@@ -1,5 +1,5 @@
 <?php
-// Conexión a la base de datos administrada por Cóndor Cloud.
+// Conexión a la base de datos administrada por Farmacia La Buena.
 // La plataforma inyecta DB_HOST, DB_PORT, DB_NAME, DB_USER y DB_PASSWORD desde un Secret.
 declare(strict_types=1);
 
@@ -8,7 +8,7 @@ function env(string $k): string
     $v = getenv($k);
     if ($v === false || $v === '') {
         // Sin valores por defecto: las credenciales solo existen en el panel de la PaaS
-        throw new RuntimeException("Falta la variable de entorno $k (configúrala en el panel de Cóndor Cloud)");
+        throw new RuntimeException("Falta la variable de entorno $k (configúrala en el panel de Farmacia La Buena)");
     }
     return $v;
 }

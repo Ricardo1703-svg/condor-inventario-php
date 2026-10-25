@@ -1,5 +1,5 @@
 <?php
-// App 1 - CRUD de productos en PHP nativo (PDO + MySQL), desplegada en Cóndor Cloud.
+// App 1 - CRUD de productos en PHP nativo (PDO + MySQL), desplegada en Farmacia La Buena.
 declare(strict_types=1);
 require __DIR__ . '/db.php';
 
@@ -94,19 +94,21 @@ try {
     $fatal = 'No se pudo conectar con la base de datos administrada. Reintenta en unos segundos.';
 }
 $editando = (string) $form['id'] !== '';
+// Nombre comercial de la PaaS: lo define el panel en la variable PLATAFORMA
+$plataforma = getenv('PLATAFORMA') ?: 'la PaaS';
 ?>
 <!doctype html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Inventario · Cóndor Cloud</title>
+<title>Inventario · <?= e($plataforma) ?></title>
 <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 <header>
   <div class="marca">Inventario <span>PHP + MySQL · v1.1</span></div>
-  <div class="infra">Desplegado en <b>Cóndor Cloud</b> · pod <code><?= e(gethostname()) ?></code></div>
+  <div class="infra">Desplegado en <b><?= e($plataforma) ?></b> · pod <code><?= e(gethostname()) ?></code></div>
 </header>
 <main>
 <?php if (isset($fatal)): ?>
