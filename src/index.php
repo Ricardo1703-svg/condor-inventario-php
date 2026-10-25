@@ -1,5 +1,5 @@
 <?php
-// App 1 - CRUD de productos en PHP nativo (PDO + MySQL), desplegada en Farmacia La Buena.
+// App 1 - CRUD de productos en PHP nativo (PDO + MySQL), desplegada en Cóndor Cloud.
 declare(strict_types=1);
 require __DIR__ . '/db.php';
 
