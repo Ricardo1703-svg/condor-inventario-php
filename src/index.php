@@ -105,7 +105,7 @@ $editando = (string) $form['id'] !== '';
 </head>
 <body>
 <header>
-  <div class="marca">Inventario <span>PHP + MySQL</span></div>
+  <div class="marca">Inventario <span>PHP + MySQL · v1.1</span></div>
   <div class="infra">Desplegado en <b>Cóndor Cloud</b> · pod <code><?= e(gethostname()) ?></code></div>
 </header>
 <main>
